@@ -2,16 +2,16 @@
 require_relative "custom_download_strategy"
 class Jengo < Formula
   desc "Golang based CLI for Jenkins API."
-  homepage "https://github.com/TomKennes/jengo"
+  homepage "https://github.com/tkennes/jengo"
   version "1.2.4"
   bottle :unneeded
 
   if OS.mac?
-    url "http://github.mycompany.com/tomkennes/jengo/releases/v1.2.4/jengo_1.2.4_Darwin_x86_64.tar.gz", :using => CurlDownloadStrategy.
+    url "http://github.mycompany.com/tkennes/jengo/releases/v1.2.4/jengo_1.2.4_Darwin_x86_64.tar.gz", :using => CurlDownloadStrategy.
     sha256 "97403f5de4e0c3261a93040de6468ba16530b43f961ee0069af316c5f06924c1"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "http://github.mycompany.com/tomkennes/jengo/releases/v1.2.4/jengo_1.2.4_Linux_x86_64.tar.gz", :using => CurlDownloadStrategy.
+    url "http://github.mycompany.com/tkennes/jengo/releases/v1.2.4/jengo_1.2.4_Linux_x86_64.tar.gz", :using => CurlDownloadStrategy.
     sha256 "7daca541feddb9a34823f39af1765fe66f522695fa28a59bda8e2e2c41d7725b"
   end
   
