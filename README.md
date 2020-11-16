@@ -1,4 +1,4 @@
-# homebrew-jengo
+# Homebrew-Jengo
 Homebrew Formulae to @jengo binaries, powered by @jengo
 
 ```sh
