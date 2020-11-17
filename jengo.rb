@@ -7,11 +7,11 @@ class Jengo < Formula
   bottle :unneeded
 
   if OS.mac?
-    url "http://github.mycompany.com/tkennes/jengo/releases/v1.3.0/jengo_1.3.0_Darwin_x86_64.tar.gz", :using => CurlDownloadStrategy.
+    url "http://github.mycompany.com/tkennes/jengo/releases/v1.3.0/jengo_1.3.0_Darwin_x86_64.tar.gz"
     sha256 "72fdb918e27d3d328d8a71f837dcbd8c991f777094c54ba002358e50cc3ab553"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "http://github.mycompany.com/tkennes/jengo/releases/v1.3.0/jengo_1.3.0_Linux_x86_64.tar.gz", :using => CurlDownloadStrategy.
+    url "http://github.mycompany.com/tkennes/jengo/releases/v1.3.0/jengo_1.3.0_Linux_x86_64.tar.gz"
     sha256 "b3ff0dd2af3007bb936b9db4bc9865041814d002e7a96ecfbc209eda65250a85"
   end
   
