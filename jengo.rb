@@ -2,24 +2,22 @@
 class Jengo < Formula
   desc "Golang based CLI for Jenkins API."
   homepage "https://github.com/tkennes/jengo"
-  version "1.3.4"
+  version "1.3.5"
   bottle :unneeded
 
   if OS.mac?
-    url "http://github.com/tkennes/jengo/releases/download/v1.3.4/jengo_1.3.4_Darwin_x86_64.tar.gz"
-    sha256 "27accccf646ebb7c5c8cd586c047e8e353241a735e905e6726857a71ce5b65c7"
+    url "http://github.com/tkennes/jengo/releases/download/v1.3.5/jengo_1.3.5_Darwin_x86_64.tar.gz"
+    sha256 "33d777b7487999714a4288b97852a888984330e4f02b608aef95bb4678212aef"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "http://github.com/tkennes/jengo/releases/download/v1.3.4/jengo_1.3.4_Linux_x86_64.tar.gz"
-    sha256 "b279904610e7f8ed81076b6faa9f49168197148ac2bb3a2baad990ead6d995ab"
+    url "http://github.com/tkennes/jengo/releases/download/v1.3.5/jengo_1.3.5_Linux_x86_64.tar.gz"
+    sha256 "13947db926bf3c99aa32550b27ceff704eab6df84a84639cfc97e95a72091413"
   end
   
   depends_on "go" => :build
 
   def install
-    system "go", "build", "-ldflags",
-             "-s -w -X main.version=#{version} -X main.commit=#{stable.specs[:revision]} -X main.builtBy=homebrew",
-             *std_go_args
+    bin.install "jengo"
   end
 
   test do
