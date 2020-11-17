@@ -2,41 +2,24 @@
 class Jengo < Formula
   desc "Golang based CLI for Jenkins API."
   homepage "https://github.com/tkennes/jengo"
-  version "1.3.3"
+  version "1.3.4"
   bottle :unneeded
 
   if OS.mac?
-    url "http://github.com/tkennes/jengo/releases/download/v1.3.3/jengo_1.3.3_Darwin_x86_64.tar.gz"
-    sha256 "34eb56de3f8790dce0cffe682dcb1efecb1500038a8909206ca46976cd375d6a"
+    url "http://github.com/tkennes/jengo/releases/download/v1.3.4/jengo_1.3.4_Darwin_x86_64.tar.gz"
+    sha256 "27accccf646ebb7c5c8cd586c047e8e353241a735e905e6726857a71ce5b65c7"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "http://github.com/tkennes/jengo/releases/download/v1.3.3/jengo_1.3.3_Linux_x86_64.tar.gz"
-    sha256 "f06b239ecc92f8b06fb8581b8c57d191e194c83952db0704bd66415d8c97f536"
+    url "http://github.com/tkennes/jengo/releases/download/v1.3.4/jengo_1.3.4_Linux_x86_64.tar.gz"
+    sha256 "b279904610e7f8ed81076b6faa9f49168197148ac2bb3a2baad990ead6d995ab"
   end
   
-  depends_on "git"
-  depends_on "zsh" => :optional
-  
-  conflicts_with "svn"
-  conflicts_with "bash"
+  depends_on "go" => :build
 
   def install
     system "go", "build", "-ldflags",
-            "-s -w -X main.version=#{version} -X main.commit=#{stable.specs[:revision]} -X main.builtBy=homebrew",
-            *std_go_args
-  end
-
-  def caveats; <<~EOS
-    Use at your own risk
-  EOS
-  end
-
-  plist_options :startup => false
-
-  def plist; <<~EOS
-    <?xml version="1.0" encoding="UTF-8"?>
-
-  EOS
+             "-s -w -X main.version=#{version} -X main.commit=#{stable.specs[:revision]} -X main.builtBy=homebrew",
+             *std_go_args
   end
 
   test do
