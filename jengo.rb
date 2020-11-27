@@ -7,11 +7,11 @@ class Jengo < Formula
 
   if OS.mac?
     url "http://github.com/tkennes/jengo/releases/download/v1.3.11/jengo_1.3.11_Darwin_x86_64.tar.gz"
-    sha256 "94b74fb9f387e85fc22733f08adf7717310151ba86a2687a5c4f23e7bc9cc79e"
+    sha256 "13fc705e34b7cbcd08341b7ee327d275107581eef97e09318971051968718556"
   end
   if OS.linux? && Hardware::CPU.intel?
     url "http://github.com/tkennes/jengo/releases/download/v1.3.11/jengo_1.3.11_Linux_x86_64.tar.gz"
-    sha256 "1a0995454e0fe9eeb176b9c014ee702044ad78b8e05701c876d8e2567ca1ee39"
+    sha256 "3fa2944e618f41429c61065f135892c9cdae032dc66bc6c60c693188d1f156ad"
   end
   
   depends_on "go" => :build
