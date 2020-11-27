@@ -2,16 +2,16 @@
 class Jengo < Formula
   desc "Golang based CLI for Jenkins API."
   homepage "https://github.com/tkennes/jengo"
-  version "1.3.11"
+  version "1.3.12"
   bottle :unneeded
 
   if OS.mac?
-    url "http://github.com/tkennes/jengo/releases/download/v1.3.11/jengo_1.3.11_Darwin_x86_64.tar.gz"
-    sha256 "13fc705e34b7cbcd08341b7ee327d275107581eef97e09318971051968718556"
+    url "http://github.com/tkennes/jengo/releases/download/v1.3.12/jengo_1.3.12_Darwin_x86_64.tar.gz"
+    sha256 "534c3dd28b1e7c872f7b7fc0293abb6a031d95e90c75aad44a2aecc162140331"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "http://github.com/tkennes/jengo/releases/download/v1.3.11/jengo_1.3.11_Linux_x86_64.tar.gz"
-    sha256 "3fa2944e618f41429c61065f135892c9cdae032dc66bc6c60c693188d1f156ad"
+    url "http://github.com/tkennes/jengo/releases/download/v1.3.12/jengo_1.3.12_Linux_x86_64.tar.gz"
+    sha256 "655dfedf432e2cc5b4a08a9fb3c83bb1b14382b6d605b5a132daf5ed23e00899"
   end
   
   depends_on "go" => :build
